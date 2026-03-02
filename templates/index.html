@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task manager</title>
+</head>
+<body>
+
+<h2>Task manager</h2>
+
+<form method="post" action="/add">
+    <input type="text" name="title" placeholder="Novi zadatak" required>
+    <button type="submit">Dodaj</button>
+</form>
+
+<hr>
+
+<ul>
+    {% for task in tasks %}
+        <li>
+            {% if task[2] == 1 %}
+                <s>{{ task[1] }}</s>
+            {% else %}
+                {{ task[1] }}
+            {% endif %}
+
+            {% if task[2] == 0 %}
+                <a href="/done/{{ task[0] }}">[done]</a>
+            {% endif %}
+
+            <a href="/delete/{{ task[0] }}">[delete]</a>
+            <a href="/edit/{{ task[0] }}">[edit]</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
