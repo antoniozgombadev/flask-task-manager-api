@@ -204,6 +204,7 @@ def api_update_task(task_id):
 
     return jsonify({"message": "Task updated"})
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run()
