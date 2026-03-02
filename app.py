@@ -5,11 +5,23 @@ from database import init_db
 import os
 app = Flask(__name__)
 
-DB_NAME = "tasks.db"
+DB_NAME = os.path.join(os.path.dirname(__file__), "tasks.db")
 
 def get_connection():
     return sqlite3.connect(DB_NAME)
 
+def init_db():
+    conn = sqlite3.connect("tasks.db")
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS tasks (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            done BOOLEAN NOT NULL DEFAULT 0
+        )
+    """)
+    conn.commit()
+    conn.close()
 
 @app.route("/")
 def index():
