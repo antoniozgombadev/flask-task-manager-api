@@ -20,6 +20,6 @@ Simple task management web application built with Flask.
 ## Preview
 
 ![TaskManager](./screenshots/task-manager.png)
-![Task-list](./screenshots/task-list.png)
-![Task-done](./screenshots/done-task.png)
-![Task-edit](./screenshots/edit-task.png)
+![Task-list](./screenshots/task.png)
+![Task-done](./screenshots/done.png)
+![Task-edit](./screenshots/edit-name.png)
