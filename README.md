@@ -16,3 +16,10 @@ Simple task management web application built with Flask.
 
 ## Live Demo
 [https://your-task-manager.onrender.com](https://flask-task-manager-api.onrender.com/)
+
+## Preview
+
+![TaskManager](./screenshots/taskmanager.png)
+![Task-list](./screenshots/task-list.png)
+![Task-done](./screenshots/done-task.png)
+![Task-edit](./screenshots/edit-task.png)
